@@ -1,9 +1,29 @@
-<?php require_once("../assets/header.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-<div class="container">
-  <?php require_once("../assets/navbar.php"); ?>
-  <?php require_once("../assets/burger.php"); ?>
-</div>
+    <title>RAS Crayfish Control Monitoring System</title>
+  </head>
+  <div class="container">
+    <?php require_once("../components/navbar.php"); ?>
+    
+    <!-- Content -->
 
-<script src="../js/index.js"></script>
+    <!-- End Content -->
 
+    <?php require_once("../components/burger.php"); ?>
+  </div>
+
+  <script src="../js/index.js"></script>
+</html>

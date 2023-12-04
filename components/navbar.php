@@ -1,7 +1,7 @@
 <aside>
         <div class="toggle">
           <div class="logo">
-            <img src="../images/logo.png" alt="crayfish-logo" />
+            <img src="../assets/images/logo.png" alt="crayfish-logo" />
           </div>
           <div class="close" id="close-btn">
             <span class="material-icons-sharp"> close </span>
@@ -9,27 +9,27 @@
         </div>
 
         <div class="sidebar">
-          <a href="dashboard.php" class="active">
+          <a href="../views/dashboard.php" class="active">
             <span class="material-symbols-outlined"> dashboard </span>
             <h3>Dashboard</h3>
           </a>
-          <a href="control.php">
+          <a href="../views/control.php">
             <span class="material-symbols-outlined"> valve </span>
             <h3>Control</h3>
           </a>
-          <a href="data.php">
+          <a href="../views/data.php">
             <span class="material-symbols-outlined"> monitoring </span>
             <h3>Data</h3>
           </a>
-          <a href="notification.php">
+          <a href="../views/notification.php">
             <span class="material-symbols-outlined"> notifications </span>
             <h3>Notifications</h3>
           </a>
-          <a href="customize.php">
+          <a href="../views/customize.php">
             <span class="material-symbols-outlined"> settings </span>
             <h3>Customize</h3>
           </a>
-          <a href="about.php">
+          <a href="../views/about.php">
             <span class="material-symbols-outlined"> info </span>
             <h3>About</h3>
           </a>

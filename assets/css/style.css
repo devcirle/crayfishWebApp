@@ -95,14 +95,6 @@ b {
   color: var(--color-dark);
 }
 
-.text-muted {
-  color: var(--color-info-dark);
-}
-
-.primary {
-  color: var(--color-primary);
-}
-
 .container {
   display: grid;
   width: 96%;
