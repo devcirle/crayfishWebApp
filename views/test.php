@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../styles/reset.css">
     <title>RAS Crayfish</title>
+    <script>
+         window.onload = function() {
+            var iframe = document.getElementById("nodeRedFrame");
+            iframe.width = iframe.contentWindow.document.body.scrollWidth;
+            iframe.height = iframe.contentWindow.document.body.scrollHeight;
+         }
+    </script>
 </head>
 
 <body>
@@ -29,37 +36,37 @@
             </div>
 
             <div class="sidebar">
-                <a href="dashboard.php">
+                <a href="#" class="active">
                     <span class="material-symbols-outlined">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="control.php" class="active">
+                <a href="#">
                     <span class="material-symbols-outlined">
                         valve
                     </span>
                     <h3>Control</h3>
                 </a>
-                <a href="data.php">
+                <a href="#">
                     <span class="material-symbols-outlined">
                         monitoring
                     </span>
                     <h3>Data</h3>
                 </a>
-                <a href="notification.php">
+                <a href="#">
                     <span class="material-symbols-outlined">
                         notifications
                     </span>
                     <h3>Notifications</h3>
                 </a>
-                <a href="customize.php">
+                <a href="#">
                     <span class="material-symbols-outlined">
                         settings
                     </span>
                     <h3>Customize</h3>
                 </a>
-                <a href="about.php">
+                <a href="#">
                     <span class="material-symbols-outlined">
                         info
                     </span>
@@ -77,21 +84,20 @@
 
         <!-- Main Content -->
         <main>
-            <iframe id="nodeIrame" src="http://localhost:1880/ui/#!/1?socketid=pHllV7pc2yhMy0tRAAAV" width="100%" height="800" frameborder="0"></iframe>
+            <iframe id="nodeRedFrame" src="http://localhost:1880/ui/#!/0?socketid=pHllV7pc2yhMy0tRAAAV" frameborder="0"></iframe>
         </main>
         <!-- End of Main Content -->
 
         <!-- Right Section -->
         <div class="right-section">
             <div class="nav">
-                <h3>Control</h3>
                 <button id="menu-btn">
                     <span class="material-icons-sharp">
                         menu
                     </span>
                 </button>
 
-                <!-- <div class="profile">
+                <div class="profile">
                     <div class="info">
                         <p>Hey, <b>Reza</b></p>
                         <small class="text-muted">Admin</small>
@@ -99,7 +105,7 @@
                     <div class="profile-photo">
                         <img src="images/profile-1.jpg">
                     </div>
-                </div> -->
+                </div>
 
             </div>
             <!-- End of Nav -->
@@ -108,7 +114,8 @@
 
 
     </div>
-    <script src="../assets/js/iframe.js"></script>
+    
+
     <script src="../assets/js/orders.js"></script>
     <script src="../assets/js/index.js"></script>
 </body>
