@@ -92,20 +92,7 @@
                         menu
                     </span>
                 </button>
-
-                <!-- <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Reza</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
-                    </div>
-                </div> -->
-
             </div>
-            <!-- End of Nav -->
-
         </div>
 
 
