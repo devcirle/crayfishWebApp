@@ -1,6 +1,6 @@
 <div class="sidebar">
 
-  <a href="../views/dashboard.php" class="active">
+  <a href="../views/index.php" class="active">
     <span class="material-symbols-outlined"> dashboard </span>
     <h3>Dashboard</h3>
   </a>

@@ -29,7 +29,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="dashboard.php">
+                <a href="index.php">
                     <span class="material-symbols-outlined">
                         dashboard
                     </span>
