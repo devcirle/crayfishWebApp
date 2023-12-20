@@ -1,0 +1,85 @@
+h3 {
+  font-size: 0.5rem;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+body {
+  background-color: #f5f5fa;
+  font-family: "Clash Grotesk";
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 100vw;
+  height: 56px;
+
+  border: solid 1px;
+  border-color: #ebebf0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  li {
+    width: 5.859375rem;
+  }
+  li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.content {
+  height: 100vh;
+}
+
+.default {
+  hr {
+    visibility: hidden;
+  }
+  h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+.active {
+  color: #235c1e;
+  hr {
+    border-radius: 1px;
+
+    border: solid 3px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: 0px;
+    padding: 0px;
+    color: #235c1e;
+    width: 4.125rem;
+  }
+  span {
+    padding-top: 0.5rem;
+  }
+  h3 {
+    padding-bottom: 0.6rem;
+  }
+}
+
+iframe {
+  /* margin-top: 3rem; */
+  padding-top: 5rem;
+  width: 100vw;
+  height: 100vh;
+}

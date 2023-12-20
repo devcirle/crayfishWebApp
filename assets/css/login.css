@@ -12,15 +12,15 @@ body {
 }
 
 .logo-container img {
-  margin-top: 5.813rem;
-  width: 3.125rem;
-  height: 3.125rem;
+  margin-top: 5.875rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .logo-container h1 {
   font-weight: 400;
-  font-size: 0.75rem;
-  letter-spacing: 0.225rem;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
 }
 
 .input-fields {
@@ -28,74 +28,42 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1.813rem;
+  margin-top: 3.75rem;
   /* margin-left: 2.063rem; */
   /* margin-right: 2.063rem; */
   /* max-width: 15.875rem; */
 }
 
-.input-fields label {
-  font-size: 0.625rem;
-  font-weight: 400rem;
-}
-
-.label-margin {
-  align-self: flex-start;
-  margin-bottom: 0.25rem;
-  margin-left: 1.625rem;
-}
-
 .input-bottom {
-  margin-bottom: 1.125rem;
+  margin-bottom: 0.625rem;
 }
 
 .input-fields input {
-  width: 15.875rem;
-  border-radius: 5px;
+  width: 21.188rem;
+  height: 3.75rem;
+  border-radius: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: #ebebf0;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 400;
-  transition: 0.2s ease-out;
-  color: darken(#ededed, 30%);
   padding-left: 1.5rem;
-}
-
-.input-fields span {
-  position: absolute;
-  display: block;
-  color: darken(#ededed, 10%);
-  left: 2.4rem;
-  width: 0.75rem;
-}
-
-.account {
-  top: 13.4rem;
-}
-
-.padlock {
-  top: 16.8rem;
-}
-
-.input-btns {
-  margin-top: 2.5rem;
 }
 
 .input-btns button {
   border-style: none;
-  border-radius: 0.938rem;
-  font-size: 0.625rem;
+  border-radius: 1.406rem;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
-  width: 15.875rem;
-  height: 1.875rem;
+  width: 21.188rem;
+  height: 2.813rem;
   background-color: #235c1e;
   color: white;
 }
 
 .input-btns a {
-  font-size: 0.5rem;
+  font-size: 0.688rem;
   font-weight: 400;
-  margin-top: 0.5rem;
+  margin-top: 0.625rem;
 }
