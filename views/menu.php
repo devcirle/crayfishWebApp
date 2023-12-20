@@ -9,35 +9,36 @@
     />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/menu.css" />
 
     <title>Dashboard</title>
   </head>
   <body>
     <div class="container">
       <nav>
-        <li class="active">
-          <a href="">
+        <li class="default">
+          <a href="dashboard.php">
             <hr />
             <span class="material-symbols-outlined">dashboard</span>
             <h3>Dashboard</h3>
           </a>
         </li>
         <li class="default">
-          <a href="control.html">
+          <a href="control.php">
             <hr />
             <span class="material-symbols-outlined">valve</span>
             <h3>Control</h3>
           </a>
         </li>
         <li class="default">
-          <a href="data.html">
+          <a href="data.php">
             <hr />
             <span class="material-symbols-outlined">monitoring</span>
             <h3>Data</h3>
           </a>
         </li>
-        <li class="default">
-          <a href="menu.html">
+        <li class="active">
+          <a href="">
             <hr />
             <span class="material-symbols-outlined">menu</span>
             <h3>Menu</h3>
@@ -45,10 +46,13 @@
         </li>
       </nav>
       <div class="content">
-        <iframe
-          src="http://localhost:1880/ui/#!/0?socketid=fu1yJuzWp4F92oKlAAAA"
-          frameborder="0"
-        ></iframe>
+        <img src="../assets/images/logo.png" alt="" />
+        <h1>ARC SYSTEM</h1>
+        <button>Notifications</button>
+        <button>Customize</button>
+        <button>Account</button>
+        <button>About</button>
+        <button class="logout-btn">Log out</button>
       </div>
     </div>
   </body>

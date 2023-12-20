@@ -38,7 +38,7 @@
     </div>
 
     <div class="input-btns">
-      <a href="views/dashboard.html">
+      <a href="views/dashboard.php">
         <button>Log in</button>
       </a>
       <a href="">Forgot Password?</a>

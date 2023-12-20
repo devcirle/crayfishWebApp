@@ -16,7 +16,7 @@
     <div class="container">
       <nav>
         <li class="default">
-          <a href="dashboard.html">
+          <a href="dashboard.php">
             <hr />
             <span class="material-symbols-outlined">dashboard</span>
             <h3>Dashboard</h3>
@@ -30,14 +30,14 @@
           </a>
         </li>
         <li class="default">
-          <a href="data.html">
+          <a href="data.php">
             <hr />
             <span class="material-symbols-outlined">monitoring</span>
             <h3>Data</h3>
           </a>
         </li>
         <li class="default">
-          <a href="menu.html">
+          <a href="menu.php">
             <hr />
             <span class="material-symbols-outlined">menu</span>
             <h3>Menu</h3>

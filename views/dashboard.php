@@ -15,29 +15,29 @@
   <body>
     <div class="container">
       <nav>
-        <li class="default">
-          <a href="dashboard.html">
+        <li class="active">
+          <a href="">
             <hr />
             <span class="material-symbols-outlined">dashboard</span>
             <h3>Dashboard</h3>
           </a>
         </li>
         <li class="default">
-          <a href="control.html">
+          <a href="control.php">
             <hr />
             <span class="material-symbols-outlined">valve</span>
             <h3>Control</h3>
           </a>
         </li>
-        <li class="active">
-          <a href="">
+        <li class="default">
+          <a href="data.php">
             <hr />
             <span class="material-symbols-outlined">monitoring</span>
             <h3>Data</h3>
           </a>
         </li>
         <li class="default">
-          <a href="menu.html">
+          <a href="menu.php">
             <hr />
             <span class="material-symbols-outlined">menu</span>
             <h3>Menu</h3>
@@ -45,12 +45,10 @@
         </li>
       </nav>
       <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae
-          necessitatibus optio recusandae rem, ad quos quia distinctio neque
-          saepe voluptates consectetur quis sed possimus incidunt, explicabo
-          esse maxime doloribus?
-        </p>
+        <iframe
+          src="http://localhost:1880/ui/#!/0?socketid=fu1yJuzWp4F92oKlAAAA"
+          frameborder="0"
+        ></iframe>
       </div>
     </div>
   </body>
