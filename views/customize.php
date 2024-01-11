@@ -1,103 +1,82 @@
+<?php
+    session_start();
+        include("../components/connection.php");
+        include("../components/functions.php");
+
+        $user_data = check_login($con);
+    
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+        $species = $_POST['species'];
+		$oxygen = $_POST['oxygen'];
+		$turbidity = $_POST['turbidity'];
+		$tds = $_POST['tds'];
+        $temperature = $_POST['temperature'];
+
+        $loweredSpecies = strtolower($species);
+        $upperFirst = ucfirst($loweredSpecies);
+
+		if(!empty($oxygen) && !empty($turbidity) && !empty($tds) && !empty($temperature))
+		{
+            $query = "INSERT INTO customidealparam (species,do,turbidity,tds,temperature) VALUES ('$upperFirst', '$oxygen','$turbidity', '$tds', '$temperature')";
+            
+            mysqli_query($con, $query);
+            header("Location: menu.php");
+            die;			
+		}else
+		{
+			echo "Enter Values";
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!--  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link rel="stylesheet" href="../styles/reset.css">
-    <title>RAS Crayfish</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <!--  -->
+
+    <title>Customize</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <!-- Sidebar Section -->
-        <aside>
-            <div class="toggle">
-                <div class="logo">
-                    <img src="../assets/images/logo.png">
-                    <!-- <h2>Crayfish</h2> -->
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
-                </div>
-            </div>
-
-            <div class="sidebar">
-                <a href="index.php">
-                    <span class="material-symbols-outlined">
-                        dashboard
-                    </span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="control.php">
-                    <span class="material-symbols-outlined">
-                        valve
-                    </span>
-                    <h3>Control</h3>
-                </a>
-                <a href="data.php">
-                    <span class="material-symbols-outlined">
-                        monitoring
-                    </span>
-                    <h3>Data</h3>
-                </a>
-                <a href="notification.php">
-                    <span class="material-symbols-outlined">
-                        notifications
-                    </span>
-                    <h3>Notifications</h3>
-                </a>
-                <a href="customize.php" class="active">
-                    <span class="material-symbols-outlined">
-                        settings
-                    </span>
-                    <h3>Customize</h3>
-                </a>
-                <a href="about.php">
-                    <span class="material-symbols-outlined">
-                        info
-                    </span>
-                    <h3>About</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        logout
-                    </span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
-        <!-- End of Sidebar Section -->
-
-        <!-- Main Content -->
-        <main>
-            
-        </main>
-        <!-- End of Main Content -->
-
-        <!-- Right Section -->
-        <div class="right-section">
-            <div class="nav">
-              <h3>Customize</h3>
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">
-                        menu
-                    </span>
-                </button>
-            </div>
-        </div>
-
-
+    <div class="logo-container">
+      <img src="../assets/images/logo.png" alt="" />
+      <h1>Customize</h1>
     </div>
 
-    <script src="../assets/js/orders.js"></script>
-    <script src="../assets/js/index.js"></script>
+    <div class="input-fields">
+        <form action="" method="post">
+            <div class="input-card">
+                <label for="species">Species:</label>
+                <input class="input-bottom" type="text" name="species" id="species">
+            </div>
+            <div class="input-card">
+                <label for="oxygen">Dissolved Oxygen (mg/L):</label>
+                <input class="input-bottom" type="text" name="oxygen" id="oxygen">
+            </div>
+            <div class="input-card">
+                <label for="turbidity">Turbidity (NTU):</label>
+                <input class="input-bottom" type="text" name="turbidity" id="turbidity">
+            </div>
+            <div class="input-card">
+                <label for="tds">Total Dissolved Solids (ppm):</label>
+                <input class="input-bottom" type="text" name="tds" id="tds">
+            </div>
+            <div class="input-card">
+                <label for="temperature">Temperature (°C):</label>
+                <input class="input-bottom" type="text" name="temperature" id="temperature">
+            </div>
+            <div class="input-btns">
+                <button>Save</button>
+            </div>
+        </form>
+    </div>
 </body>
-
 </html>

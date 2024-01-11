@@ -3,31 +3,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.content img {
+  width: 4.5rem;
+}
 
-  img {
-    width: 4.5rem;
-  }
+.content h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3.1875rem;
+}
 
-  h1 {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-    margin-bottom: 3.1875rem;
-  }
-
-  button {
-    background-color: white;
-    width: 18.1875rem;
-    height: 2.25rem;
-    margin-top: 0.875rem;
-    font-size: 0.75rem;
-    text-align: left;
-    padding-left: 2.25rem;
-    border: 1px;
-    border-style: solid;
-    border-color: #ebebf0;
-    border-radius: 5px;
-  }
+.content button {
+  background-color: white;
+  width: 18.1875rem;
+  height: 2.25rem;
+  margin-top: 0.875rem;
+  font-size: 0.75rem;
+  text-align: left;
+  padding-left: 2.25rem;
+  border: 1px;
+  border-style: solid;
+  border-color: #ebebf0;
+  border-radius: 5px;
 }
 
 .content .logout-btn {
@@ -38,4 +37,9 @@
   text-align: center;
   color: white;
   margin-top: 1.75rem;
+  border-style: none;
+}
+
+.logout-btn:hover {
+  background-color: #d52620;
 }

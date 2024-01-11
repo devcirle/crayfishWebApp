@@ -10,6 +10,9 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  /* overflow: hidden; */
+  /* overscroll-behavior: none; */
+  height: 100%;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -42,6 +45,9 @@ body {
   margin: 0px;
   min-height: 100vh;
   line-height: 1.5;
+  /* overflow: hidden; */
+  /* overscroll-behavior: none; */
+  /* position: sticky; */
 }
 
 /* Set shorter line heights on headings and interactive elements */

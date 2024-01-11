@@ -1,3 +1,12 @@
+<?php
+  session_start();
+    include("../components/connection.php");
+    include("../components/functions.php");
+
+    $user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,8 +22,8 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <div class="container">
-      <nav>
+    <div class="container grid">
+      <nav class="grid">
         <li class="active">
           <a href="">
             <hr />

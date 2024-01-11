@@ -1,3 +1,52 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
+
+	include("components/connection.php");
+	include("components/functions.php");
+
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$username = $_POST['username'];
+		$password = $_POST['passwd'];
+
+		if(!empty($username) && !empty($password) && !is_numeric($username))
+		{
+
+			//read from database
+			$query = "select * from users where username = '$username' limit 1";
+			$result = mysqli_query($con, $query);
+
+			if($result)
+			{
+				if($result && mysqli_num_rows($result) > 0)
+				{
+
+					$user_data = mysqli_fetch_assoc($result);
+
+          // if($user_data['pwd'] === $password)
+          if(password_verify($password, $user_data['pwd']))
+					{
+
+						$_SESSION['user_id'] = $user_data['user_id'];
+						header("Location: views/dashboard.php");
+						die;
+					}
+				}
+			}
+			
+			echo "wrong username or password!";
+		}else
+		{
+			echo "wrong username or password!";
+		}
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,28 +69,27 @@
     </div>
 
     <div class="input-fields">
-      <input
-        class="input-bottom"
-        type="text"
-        name="username"
-        id="username"
-        placeholder="Username"
-      />
-
-      <input
-        class="input-bottom"
-        type="password"
-        name="pwd"
-        id="pwd"
-        placeholder="Password"
-      />
-    </div>
-
-    <div class="input-btns">
-      <a href="views/dashboard.php">
-        <button>Log in</button>
-      </a>
-      <a href="">Forgot Password?</a>
-    </div>
+      <form action="" method="post">
+        <input
+          class="input-bottom"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+  
+        <input
+          class="input-bottom"
+          type="password"
+          name="passwd"
+          id="passwd"
+          placeholder="Password"
+        />
+  
+      <div class="input-btns">
+          <button>Log In</button>
+        <a href="">Forgot Password?</a>
+      </div>
+      </form>
   </body>
 </html>

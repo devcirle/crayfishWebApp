@@ -1,3 +1,12 @@
+<?php
+  session_start();
+    include("../components/connection.php");
+    include("../components/functions.php");
+
+    $user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +18,7 @@
     />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/dropdown.css">
     <link rel="stylesheet" href="../assets/css/menu.css" />
 
     <title>Dashboard</title>
@@ -48,12 +58,65 @@
       <div class="content">
         <img src="../assets/images/logo.png" alt="" />
         <h1>ARC SYSTEM</h1>
-        <button>Notifications</button>
-        <button>Customize</button>
-        <button>Account</button>
+        <div class="dropdown">
+          <div class="select">
+            Customize
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li onclick="window.location.href='#'">Set Current Parameters</li>
+            <li onclick="window.location.href='customize.php'">Add Custom Parameters</li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <div class="select">
+            Account
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li onclick="window.location.href='addAccount.php'">Add Account</li>
+            <li onclick="window.location.href='changePass.php'">Change Password</li>
+          </ul>
+        </div>
         <button>About</button>
-        <button class="logout-btn">Log out</button>
+
+        <a href="logout.php"><button class="logout-btn">Log Out</button></a>
       </div>
     </div>
+
+    <!-- javascript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      dropdowns.forEach(dropdown => {
+        const select = dropdown.querySelector('.select');
+        const caret = dropdown.querySelector('.caret');
+        const menu = dropdown.querySelector('.menu');
+        const options = dropdown.querySelectorAll('.menu li');
+        const selected = dropdown.querySelector('.selected');
+
+        select.addEventListener('click', () => {
+          select.classList.toggle('select-clicked');
+          caret.classList.toggle('caret-rotate');
+          menu.classList.toggle('menu-open');
+        });
+
+        options.forEach(option => {
+          option.addEventListener('click', () => {
+            selected.innerText = option.innerText;
+            select.classList.remove('select-clicked');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('menu-open');
+            options.forEach(option => {
+              option.classList.remove('activeSel');
+            });
+            option.classList.add('activeSel');
+          });
+        });
+      });
+    });
+
+    </script>
   </body>
 </html>

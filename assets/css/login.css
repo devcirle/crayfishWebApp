@@ -1,3 +1,9 @@
+h3 {
+  font-size: 0.6em;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
 body {
   background-color: #f5f5fa;
   font-family: "Clash Grotesk";
@@ -23,15 +29,15 @@ body {
   letter-spacing: 0.3rem;
 }
 
-.input-fields {
+form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 3.75rem;
-  /* margin-left: 2.063rem; */
-  /* margin-right: 2.063rem; */
-  /* max-width: 15.875rem; */
+  /* margin-left: 2.063rem;
+  margin-right: 2.063rem;
+  max-width: 15.875rem; */
 }
 
 .input-bottom {
@@ -50,7 +56,19 @@ body {
   padding-left: 1.5rem;
 }
 
-.input-btns button {
+.input-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-card label {
+  align-self: flex-start;
+  padding-left: 0.8rem;
+}
+
+.input-btns button,
+.submit-btn {
   border-style: none;
   border-radius: 1.406rem;
   font-size: 0.875rem;
@@ -58,7 +76,8 @@ body {
   font-weight: 500;
   width: 21.188rem;
   height: 2.813rem;
-  background-color: #235c1e;
+  /* background-color: #235c1e; */
+  background-color: #23681d;
   color: white;
 }
 
@@ -67,3 +86,14 @@ body {
   font-weight: 400;
   margin-top: 0.625rem;
 }
+
+.input-btns button:hover {
+  background-color: #235c1e;
+  /* background-color: #23681d; */
+  /* color: #235c1e; */
+  /* border: 1px #23681d solid; */
+}
+
+/* label {
+  align-self: flex-start;
+} */
