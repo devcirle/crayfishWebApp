@@ -56,18 +56,30 @@
     <title>Add User</title>
 </head>
 <body>
+    <div class="back">
+        <span onclick="window.location.href='menu.php'" class="material-symbols-outlined">arrow_back_ios_new</span>
+    </div>
     <div class="logo-container">
-        <img src="../assets/images/logo.png" alt="" />
+        <!-- <img src="../assets/images/logo.png" alt="" /> -->
         <h1>ADD USER ACCOUNT</h1>
     </div>
 
     <div class="input-fields">
         <form action="" method="post">
-            <input class="input-bottom" type="text" name="username" id="username" placeholder="Username" required>
+            <div class="input-card">
+                <label for="username">Username:</label>
+                <input class="input-bottom" type="text" name="username" id="username" placeholder="Username" required>
+            </div>
     
-            <input class="input-bottom" type="password" name="password" id="password" placeholder="Password" required>
+            <div class="input-card">
+                <label for="password">Password:</label>
+                <input class="input-bottom" type="password" name="password" id="password" placeholder="Password" required>
+            </div>
             
-            <input class="input-bottom" type="password" name="confirmPass" id="confirmPass" placeholder="Confirm Password" required>
+            <div class="input-card">
+                <label for="confirmPass">Confirm Password:</label>
+                <input class="input-bottom" type="password" name="confirmPass" id="confirmPass" placeholder="Confirm Password" required>
+            </div>
             
             <div class="input-btns">
                 <button>Add Account</button>

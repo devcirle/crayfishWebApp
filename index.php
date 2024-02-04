@@ -88,7 +88,7 @@ session_start();
   
       <div class="input-btns">
           <button>Log In</button>
-        <a href="">Forgot Password?</a>
+        <!-- <a href="">Forgot Password?</a> -->
       </div>
       </form>
   </body>

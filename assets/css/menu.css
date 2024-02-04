@@ -3,16 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.content img {
-  width: 4.5rem;
-}
-
-.content h1 {
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  margin-bottom: 3.1875rem;
+  height: 100%;
 }
 
 .content button {

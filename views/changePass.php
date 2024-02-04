@@ -72,18 +72,30 @@
     <title>Add User</title>
 </head>
 <body>
+    <div class="back">
+        <span onclick="window.location.href='menu.php'" class="material-symbols-outlined">arrow_back_ios_new</span>
+    </div>
     <div class="logo-container">
-        <img src="../assets/images/logo.png" alt="" />
-        <h1>ADD USER ACCOUNT</h1>
+        <!-- <img src="../assets/images/logo.png" alt="" /> -->
+        <h1>CHANGE PASSWORD</h1>
     </div>
 
     <div class="input-fields">
         <form action="" method="post">
-            <input class="input-bottom" type="text" name="currPass" id="currPass" placeholder="Current Password" required>
+            <div class="input-card">
+                <label for="currPass">Current Password:</label>
+                <input class="input-bottom" type="text" name="currPass" id="currPass" placeholder="Current Password" required>
+            </div>
     
-            <input class="input-bottom" type="password" name="password" id="password" placeholder="New Password" required>
+            <div class="input-card">
+                <label for="password">New Password:</label>
+                <input class="input-bottom" type="password" name="password" id="password" placeholder="New Password" required>
+            </div>
             
-            <input class="input-bottom" type="password" name="confirmPass" id="confirmPass" placeholder="Confirm New Password" required>
+            <div class="input-card">
+                <label for="confirmPass">Confirm New Password:</label>
+                <input class="input-bottom" type="password" name="confirmPass" id="confirmPass" placeholder="Confirm New Password" required>
+            </div>
             
             <div class="input-btns">
                 <button>Save</button>

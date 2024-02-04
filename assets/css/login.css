@@ -97,3 +97,24 @@ form {
 /* label {
   align-self: flex-start;
 } */
+
+.back span {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  border: solid 1px #ebebf0;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  position: sticky;
+  top: 1rem;
+}
+
+.input-btns {
+  margin-top: 2rem;
+}
