@@ -2,7 +2,7 @@
 
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "";
+$dbpass = "crayfish";
 $dbname = "crayfish_db";
 
 if (!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)){

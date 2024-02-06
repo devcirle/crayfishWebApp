@@ -33,9 +33,9 @@ body {
 }
 
 .header-wrapper {
-  position: sticky;
-  top: 0;
-  bottom: 6.5rem;
+  position: sticky !important;
+  top: 0 !important;
+  bottom: 6.5rem !important;
 }
 
 .header {

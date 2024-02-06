@@ -19,7 +19,7 @@
     />
 
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
 
     <title>Dashboard</title>
   </head>
@@ -36,7 +36,7 @@
       </div>
       <div class="content">
         <iframe
-          src="http://192.168.113.4:1880/ui/#!/0?socketid=oM8LL3ztHEU7aLEHAAAw"
+          src="http://192.168.1.82:1880/ui/#!/0?socketid=PS3WeVgP38p8wzEEAAAS"
           frameborder="0"
         ></iframe>
       </div>
